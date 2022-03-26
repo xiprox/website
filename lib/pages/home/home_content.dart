@@ -9,11 +9,10 @@ class HomeContent extends StatelessWidget {
     final colors = context.colors;
     final size = context.mediaQuery.size;
     return Padding(
-      padding: EdgeInsets.only(left: size.width * 0.1),
+      padding: EdgeInsets.only(left: size.width * 0.08),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
-        // ignore: prefer_const_literals_to_create_immutables
         children: [
           Text(
             'Hello',
