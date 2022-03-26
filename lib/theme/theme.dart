@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static ThemeData light() => make(Brightness.light);
+  static ThemeData light(Color seed) => make(Brightness.light, seed);
 
-  static ThemeData dark() => make(Brightness.dark);
+  static ThemeData dark(Color seed) => make(Brightness.dark, seed);
 
-  static ThemeData make(Brightness brightness) {
+  static ThemeData make(Brightness brightness, Color seed) {
     final theme = ThemeData(brightness: brightness);
     final textTheme = GoogleFonts.nunitoTextTheme();
     final colors = ColorScheme.fromSeed(
-      seedColor: _randomSeed(),
+      seedColor: seed,
       brightness: brightness,
     );
     return theme.copyWith(
@@ -23,7 +23,7 @@ class AppTheme {
     );
   }
 
-  static Color _randomSeed() {
+  static Color randomSeed() {
     const options = [
       Colors.red,
       Colors.pinkAccent,

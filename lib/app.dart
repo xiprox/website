@@ -7,10 +7,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final seed = AppTheme.randomSeed();
     return MaterialApp.router(
       title: 'xip',
-      theme: AppTheme.light(),
-      darkTheme: AppTheme.dark(),
+      theme: AppTheme.light(seed),
+      darkTheme: AppTheme.dark(seed),
       themeMode: ThemeMode.system,
       routerDelegate: router.delegate(),
       routeInformationParser: router.defaultRouteParser(),
