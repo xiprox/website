@@ -23,7 +23,7 @@ class HomeContent extends StatelessWidget {
             ),
           ),
           Text(
-            ' İhsan here. This is my playground on the internet I guess.',
+            'İhsan here. This is my playground on the internet I guess.',
             style: TextStyle(
               fontSize: 16,
               color: colors.secondary,
@@ -31,7 +31,7 @@ class HomeContent extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            ' Being built with Flutter whenever I feel like it.',
+            'Being built with Flutter whenever I feel like it.',
             style: TextStyle(
               fontSize: 10,
               color: colors.onSurfaceVariant.withOpacity(0.4),
