@@ -67,9 +67,12 @@ class NetworkImageWithPlaceholder extends StatelessWidget {
       builder: (context, constraints) {
         return ClipRRect(
           borderRadius: borderRadius ?? _kDefaultBorderRadius,
-          child: url != null
-              ? _buildImage(context, constraints)
-              : _buildPlaceholder(context, constraints),
+          child: Stack(
+            children: [
+              _buildPlaceholder(context, constraints),
+              if (url != null) _buildImage(context, constraints),
+            ],
+          ),
         );
       },
     );
@@ -78,7 +81,7 @@ class NetworkImageWithPlaceholder extends StatelessWidget {
   Widget _buildImage(BuildContext context, BoxConstraints constraints) {
     return Image.network(
       url!,
-      frameBuilder: FrameBuilder.fadeIn200ms,
+      frameBuilder: FrameBuilder.fadeIn400ms,
       width: size ?? constraints.maxWidth,
       height: size ?? constraints.maxWidth,
       fit: BoxFit.cover,
@@ -89,7 +92,7 @@ class NetworkImageWithPlaceholder extends StatelessWidget {
     final theme = context.theme;
     final lightTheme = theme.brightness == Brightness.light;
     final backgroundColor =
-        theme.colorScheme.surfaceVariant.manipulate(lightTheme ? 0.95 : 1.2);
+        theme.colorScheme.surface.manipulate(lightTheme ? 0.95 : 1.2);
 
     final size = this.size ?? constraints.maxWidth;
     return Container(

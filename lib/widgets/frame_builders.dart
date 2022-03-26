@@ -34,6 +34,21 @@ class FrameBuilder {
     );
   }
 
+  static Widget fadeIn400ms(
+    BuildContext context,
+    Widget child,
+    int? frame,
+    bool wasSynchronouslyLoaded,
+  ) {
+    return _fadeIn(
+      context,
+      child,
+      frame,
+      wasSynchronouslyLoaded,
+      const Duration(milliseconds: 400),
+    );
+  }
+
   static Widget _fadeIn(
     BuildContext context,
     Widget child,
