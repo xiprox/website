@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:get_it/get_it.dart';
+import 'package:universal_io/io.dart';
 import 'package:website/navigation/navigation.dart';
 
 import 'exported_services.dart';
