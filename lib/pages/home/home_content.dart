@@ -25,7 +25,7 @@ class HomeContent extends StatelessWidget {
           Text(
             ' İhsan here. This is my playground on the internet I guess.',
             style: TextStyle(
-              // fontWeight: FontWeight.w600,
+              fontSize: 16,
               color: colors.secondary,
             ),
           ),
