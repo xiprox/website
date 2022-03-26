@@ -19,7 +19,22 @@ class HomeContent extends StatelessWidget {
             style: TextStyle(
               fontSize: 54,
               fontWeight: FontWeight.w600,
-              color: colors.onSurfaceVariant,
+              color: colors.primary,
+            ),
+          ),
+          Text(
+            ' İhsan here. This is my playground on the internet I guess.',
+            style: TextStyle(
+              // fontWeight: FontWeight.w600,
+              color: colors.secondary,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            ' Being built with Flutter whenever I feel like it.',
+            style: TextStyle(
+              fontSize: 10,
+              color: colors.onSurfaceVariant.withOpacity(0.4),
             ),
           ),
         ],
