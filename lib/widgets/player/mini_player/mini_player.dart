@@ -43,8 +43,8 @@ class MiniPlayer extends ViewModelWidget<PlayerViewModel> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 NetworkImageWithPlaceholder.track(
-                  vm.currentTrack?.albumArtLarge ??
-                      vm.currentTrack?.albumArtSmall,
+                  vm.currentTrack?.albumArtSmall ??
+                      vm.currentTrack?.albumArtLarge,
                   size: 60,
                 ),
                 Flexible(
