@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v1.4.0
+      with:
+        channel: beta
+    - run: flutter config --enable-web
+    - run: flutter pub get
+    - run: flutter build web --release
+    - uses: easingthemes/ssh-deploy@v2.1.2
+      env:
+        REMOTE_USER: ${{secrets.SSH_USERNAME}}
+        REMOTE_HOST: ${{secrets.SSH_HOST}}
+        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+        SOURCE: "build/web/"
+        TARGET: ${{secrets.REMOTE_TARGET}}

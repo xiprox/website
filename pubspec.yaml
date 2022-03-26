@@ -1,0 +1,43 @@
+name: website
+description: Personal website.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0-69.2.beta <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Core
+  veee: ^0.9.1
+  auto_route: ^3.2.4
+  get_it: ^7.2.0
+  # Network
+  http: ^0.13.4
+  dio: ^4.0.4
+  api_call:
+    git: https://github.com/xiprox/flutter_api_call
+  # Platform
+  just_audio: ^0.9.20
+  url_launcher: ^6.0.20
+  # UI
+  flutter_svg: ^1.0.3
+  # Util
+  universal_io: ^2.0.4
+  worker_manager: ^4.2.4
+  url_strategy: ^0.2.0
+  google_fonts: ^2.3.1
+  flextensions: ^0.0.7
+  supercharged: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.7
+  auto_route_generator: ^3.2.3
+
+flutter:
+  uses-material-design: true
