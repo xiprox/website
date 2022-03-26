@@ -23,6 +23,7 @@ abstract class AudioPlayer {
   Future stop();
   Stream<AudioPlayerState> get state;
   Stream<Duration> get position;
+  Duration? get duration;
 }
 
 class JustAudioAudioPlayer extends AudioPlayer {
@@ -69,4 +70,7 @@ class JustAudioAudioPlayer extends AudioPlayer {
 
   @override
   Stream<Duration> get position => _player.positionStream;
+
+  @override
+  Duration? get duration => _player.duration;
 }

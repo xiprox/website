@@ -89,7 +89,7 @@ class NetworkImageWithPlaceholder extends StatelessWidget {
     final theme = context.theme;
     final lightTheme = theme.brightness == Brightness.light;
     final backgroundColor =
-        theme.colorScheme.background.manipulate(lightTheme ? 0.95 : 1.2);
+        theme.colorScheme.surfaceVariant.manipulate(lightTheme ? 0.95 : 1.2);
 
     final size = this.size ?? constraints.maxWidth;
     return Container(

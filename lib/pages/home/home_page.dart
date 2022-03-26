@@ -14,13 +14,13 @@ class HomePage extends ViewModelWidget<HomeViewModel> {
       body: Stack(
         children: const [
           HomeContent(),
-          // Align(
-          //   alignment: Alignment.bottomRight,
-          //   child: Padding(
-          //     padding: EdgeInsets.all(16),
-          //     child: MiniPlayer(),
-          //   ),
-          // ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: MiniPlayer(),
+            ),
+          ),
         ],
       ),
     );
