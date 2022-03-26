@@ -17,7 +17,7 @@ class TrackInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween(begin: 0.0, end: 1.0),
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 400),
       key: ValueKey(track.name),
       curve: Curves.easeOutCubic,
       builder: (context, double animation, child) {

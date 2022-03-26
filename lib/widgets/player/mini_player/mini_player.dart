@@ -49,7 +49,7 @@ class MiniPlayer extends ViewModelWidget<PlayerViewModel> {
                 ),
                 Flexible(
                   child: AnimatedSize(
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 400),
                     alignment: AlignmentDirectional.centerStart,
                     curve: Curves.fastOutSlowIn,
                     child: Padding(
