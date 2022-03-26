@@ -21,7 +21,7 @@ class MiniPlayer extends ViewModelWidget<PlayerViewModel> {
       color: colors.background,
       elevation: 16,
       borderRadius: BorderRadius.circular(8),
-      shadowColor: colors.shadow,
+      shadowColor: colors.shadow.withOpacity(0.5),
       child: AnimatedSize(
         duration: const Duration(milliseconds: 300),
         alignment: AlignmentDirectional.bottomEnd,
