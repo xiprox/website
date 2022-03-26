@@ -23,11 +23,7 @@ class TrackInfo extends StatelessWidget {
       builder: (context, double animation, child) {
         return Opacity(
           opacity: animation,
-          child: Transform.translate(
-            offset: Tween(begin: const Offset(0.0, -2), end: Offset.zero)
-                .transform(animation),
-            child: child,
-          ),
+          child: child,
         );
       },
       child: Column(
