@@ -1,16 +1,3 @@
 # website
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A playground of a personal website, build with Flutter. For now, there's just a simple home page with a mini player that plays song previews from a [Spotify playlist](https://open.spotify.com/playlist/334si7HxnVyL1NJFkEa2gB?si=7a8c9b38820d4491).
