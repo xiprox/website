@@ -9,8 +9,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'İI',
-      theme: AppTheme.dark(),
+      theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
+      themeMode: ThemeMode.system,
       routerDelegate: router.delegate(),
       routeInformationParser: router.defaultRouteParser(),
     );
