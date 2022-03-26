@@ -16,12 +16,15 @@ class MiniPlayer extends ViewModelWidget<PlayerViewModel> {
 
   @override
   Widget build(BuildContext context, PlayerViewModel vm) {
+    final isLightTheme = context.theme.brightness == Brightness.light;
     final colors = context.colors;
+    final shadowColor =
+        isLightTheme ? colors.shadow.withOpacity(0.5) : colors.shadow;
     return Material(
       color: colors.background,
       elevation: 16,
       borderRadius: BorderRadius.circular(8),
-      shadowColor: colors.shadow.withOpacity(0.5),
+      shadowColor: shadowColor,
       child: AnimatedSize(
         duration: const Duration(milliseconds: 300),
         alignment: AlignmentDirectional.bottomEnd,
