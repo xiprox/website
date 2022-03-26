@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'website',
+      title: 'İI',
       theme: AppTheme.dark(),
       darkTheme: AppTheme.dark(),
       routerDelegate: router.delegate(),
