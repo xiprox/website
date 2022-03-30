@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       title: 'xip',
       theme: AppTheme.light(seed),
       darkTheme: AppTheme.dark(seed),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark, // Dark theme only until we implement a toggle switch
       routerDelegate: router.delegate(),
       routeInformationParser: router.defaultRouteParser(),
     );
