@@ -58,10 +58,10 @@ class FrameBuilder {
   ) {
     if (wasSynchronouslyLoaded) return child;
     return AnimatedOpacity(
-      child: child,
       opacity: frame == null ? 0 : 1,
       duration: duration,
       curve: Curves.easeOut,
+      child: child,
     );
   }
 
