@@ -37,7 +37,6 @@ class PlayerViewModel extends ViewModel with BusyViewModel {
       }
     } else {
       tracks = resource;
-      print(resource.error);
     }
     notifyListeners();
   }

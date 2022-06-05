@@ -73,15 +73,12 @@ class FrameBuilder {
     Image placeholder,
   ) {
     if (wasSynchronouslyLoaded) return child;
-    if (frame == null) {
-      return ImageFiltered(
-        imageFilter: ImageFilter.blur(
-          sigmaX: 10,
-          sigmaY: 10,
-        ),
-        child: placeholder,
-      );
-    }
-    return child;
+    return ImageFiltered(
+      imageFilter: ImageFilter.blur(
+        sigmaX: 10,
+        sigmaY: 10,
+      ),
+      child: placeholder,
+    );
   }
 }

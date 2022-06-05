@@ -1,12 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:veee/veee.dart';
 import 'package:website/utils/exts/all.dart';
 import 'package:website/widgets/network_image_with_placeholder/network_image_with_placeholder.dart';
 import 'package:website/widgets/player/player_vm.dart';
 
-import 'controls/controls.dart';
 import 'controls/next.dart';
 import 'controls/play_pause.dart';
 import 'info/track_info.dart';

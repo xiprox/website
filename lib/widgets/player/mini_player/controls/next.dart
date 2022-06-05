@@ -57,7 +57,7 @@ class NextButton extends StatelessWidget {
                     return SweepGradient(
                       startAngle: 0,
                       endAngle: 3 * pi * (1 - percent),
-                      stops: [0.7, 0.7],
+                      stops: const [0.7, 0.7],
                       // 0.0 , 0.5 , 0.5 , 1.0
                       center: Alignment.center,
                       colors: [color, Colors.transparent],
