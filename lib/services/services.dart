@@ -35,6 +35,6 @@ class Services {
   }
 
   static Future _initTesting() async {
-    return _init(); // TODO
+    return _init();
   }
 }
