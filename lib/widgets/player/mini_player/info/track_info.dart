@@ -7,10 +7,16 @@ import 'song_line.dart';
 
 class TrackInfo extends StatelessWidget {
   final Track track;
+  final Function()? onSongPress;
+  final Function()? onAlbumPress;
+  final Function()? onArtistPress;
 
   const TrackInfo({
     Key? key,
     required this.track,
+    this.onSongPress,
+    this.onAlbumPress,
+    this.onArtistPress,
   }) : super(key: key);
 
   @override
@@ -30,9 +36,19 @@ class TrackInfo extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SongLine(name: track.name),
-          AlbumLine(name: track.albumName, url: track.albumExternalUrl),
-          ArtistLine(name: track.artistName),
+          SongLine(
+            name: track.name,
+            onPress: onSongPress,
+          ),
+          AlbumLine(
+            name: track.albumName,
+            url: track.albumExternalUrl,
+            onPress: onAlbumPress,
+          ),
+          ArtistLine(
+            name: track.artistName,
+            onPress: onArtistPress,
+          ),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:api_call/resource.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:veee/veee.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:website/data/models/track.dart';
@@ -68,6 +69,27 @@ class PlayerViewModel extends ViewModel with BusyViewModel {
 
   void onCurrentTrackFinishPlaying() {
     _playNext();
+  }
+
+  void onSongPress() {
+    final url = currentTrack?.externalUrl;
+    if (url != null) {
+      launch(url);
+    }
+  }
+
+  void onAlbumPress() {
+    final url = currentTrack?.albumExternalUrl;
+    if (url != null) {
+      launch(url);
+    }
+  }
+
+  void onArtistPress() {
+    final url = currentTrack?.artistExternalUrl;
+    if (url != null) {
+      launch(url);
+    }
   }
 
   void onPlayPausePress() {

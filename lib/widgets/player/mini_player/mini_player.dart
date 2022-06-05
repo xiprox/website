@@ -54,7 +54,12 @@ class MiniPlayer extends ViewModelWidget<PlayerViewModel> {
                     curve: Curves.fastOutSlowIn,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: TrackInfo(track: vm.currentTrack!),
+                      child: TrackInfo(
+                        track: vm.currentTrack!,
+                        onSongPress: vm.onSongPress,
+                        onAlbumPress: vm.onAlbumPress,
+                        onArtistPress: vm.onArtistPress,
+                      ),
                     ),
                   ),
                 ),
