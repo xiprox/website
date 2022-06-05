@@ -750,7 +750,7 @@ packages:
       name: veee
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.1"
+    version: "0.9.3"
   watcher:
     dependency: transitive
     description:
