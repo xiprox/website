@@ -5,40 +5,41 @@ publish_to: 'none'
 version: 1.0.1+1
 
 environment:
-  sdk: ">=2.17.0-69.2.beta <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   # Core
-  veee: ^0.9.3
-  auto_route: ^4.0.1
-  get_it: ^7.2.0
+  veee: ^0.10.0
+  auto_route: ^7.8.4
+  get_it: ^7.6.4
   # Network
-  http: ^0.13.4
-  dio: ^4.0.0
+  http: ^1.1.0
+  dio: ^5.3.3
   api_call:
     git: https://github.com/xiprox/flutter_api_call
   # Platform
-  just_audio: ^0.9.20
-  url_launcher: ^6.0.20
+  just_audio: ^0.9.35
+  url_launcher: ^6.1.14
   # UI
-  flutter_svg: ^1.0.3
+  flutter_svg: ^2.0.7
   # Util
-  universal_io: ^2.0.4
-  worker_manager: ^4.2.4
+  universal_io: ^2.2.2
   url_strategy: ^0.2.0
-  google_fonts: ^3.0.1
-  flextensions: ^0.1.0
-  supercharged: ^2.1.1
-  collection: ^1.15.0
+  google_fonts: ^6.1.0
+  flextensions: ^0.2.1
+  collection: ^1.17.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
-  build_runner: ^2.1.7
-  auto_route_generator: ^4.0.0
+  flutter_lints: ^2.0.3
+  build_runner: ^2.4.6
+  auto_route_generator: ^7.3.2
+
+dependency_overrides:
+  dio: ^5.3.3
 
 flutter:
   uses-material-design: true

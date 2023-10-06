@@ -10,9 +10,9 @@ class HomePage extends ViewModelWidget<HomeViewModel> {
 
   @override
   Widget build(BuildContext context, HomeViewModel vm) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
-        children: const [
+        children: [
           HomeContent(),
           Align(
             alignment: Alignment.bottomRight,

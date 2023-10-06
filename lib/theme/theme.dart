@@ -17,9 +17,9 @@ class AppTheme {
     );
     return theme.copyWith(
       colorScheme: colors,
-      backgroundColor: colors.background,
       scaffoldBackgroundColor: colors.surfaceVariant,
       textTheme: textTheme,
+      useMaterial3: true,
     );
   }
 

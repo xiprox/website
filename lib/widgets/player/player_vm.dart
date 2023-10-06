@@ -1,7 +1,7 @@
 import 'package:api_call/resource.dart';
+import 'package:flextensions/flextensions.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:veee/veee.dart';
-import 'package:supercharged/supercharged.dart';
 import 'package:website/data/models/track.dart';
 import 'package:website/services/services.dart';
 
@@ -57,7 +57,7 @@ class PlayerViewModel extends ViewModel with BusyViewModel {
   }
 
   void _playNext() {
-    if (_trackIndex == tracks?.data?.lastIndex) {
+    if (_trackIndex == tracks?.data?.length.minus(1)) {
       _trackIndex = 0;
       tracks?.data?.shuffle();
     } else {
@@ -71,24 +71,16 @@ class PlayerViewModel extends ViewModel with BusyViewModel {
     _playNext();
   }
 
-  void onSongPress() {
-    final url = currentTrack?.externalUrl;
-    if (url != null) {
-      launch(url);
-    }
-  }
+  void onSongPress() => _launchUri(currentTrack?.externalUrl);
 
-  void onAlbumPress() {
-    final url = currentTrack?.albumExternalUrl;
-    if (url != null) {
-      launch(url);
-    }
-  }
+  void onAlbumPress() => _launchUri(currentTrack?.albumExternalUrl);
 
-  void onArtistPress() {
-    final url = currentTrack?.artistExternalUrl;
-    if (url != null) {
-      launch(url);
+  void onArtistPress() => _launchUri(currentTrack?.artistExternalUrl);
+
+  void _launchUri(String? url) {
+    final uri = Uri.tryParse(url ?? '');
+    if (uri != null) {
+      launchUrl(uri);
     }
   }
 

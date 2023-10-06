@@ -31,8 +31,11 @@
 .pub/
 /build/
 
+# Flutter generated files
+*.g.dart
+*.gr.dart
+
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

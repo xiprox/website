@@ -1,15 +1,18 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:website/pages/home/home_wrapper.dart';
 
-@CustomAutoRouter(
-  replaceInRouteName: 'Page,Route',
-  routes: [
+part 'router.gr.dart';
+
+@AutoRouterConfig(
+  replaceInRouteName: 'Page|Wrapper,Route',
+)
+class AppRouter extends _$AppRouter {
+  @override
+  final List<AutoRoute> routes = [
     AutoRoute(
       initial: true,
       path: '/',
-      name: 'HomeRoute',
-      page: HomeWrapper,
+      page: HomeRoute.page,
     ),
-  ],
-)
-class $AppRouter {}
+  ];
+}

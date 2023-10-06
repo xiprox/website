@@ -12,6 +12,7 @@ jobs:
     - uses: subosito/flutter-action@v2
     - run: flutter config --enable-web
     - run: flutter pub get
+    - run: ./do gen
     - run: flutter build web --release
     - uses: easingthemes/ssh-deploy@v2.1.2
       env:

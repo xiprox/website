@@ -1,44 +1,39 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// AutoRouterGenerator
 // **************************************************************************
-//
+
 // ignore_for_file: type=lint
+// coverage:ignore-file
 
-import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:flutter/material.dart' as _i3;
+part of 'router.dart';
 
-import '../pages/home/home_wrapper.dart' as _i1;
-
-class AppRouter extends _i2.RootStackRouter {
-  AppRouter([_i3.GlobalKey<_i3.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+abstract class _$AppRouter extends RootStackRouter {
+  // ignore: unused_element
+  _$AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i2.PageFactory> pagesMap = {
+  final Map<String, PageFactory> pagesMap = {
     HomeRoute.name: (routeData) {
-      return _i2.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i1.HomeWrapper(),
-          opaque: true,
-          barrierDismissible: false);
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeWrapper(),
+      );
     }
   };
-
-  @override
-  List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(HomeRoute.name, path: '/')];
 }
 
 /// generated route for
-/// [_i1.HomeWrapper]
-class HomeRoute extends _i2.PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/');
+/// [HomeWrapper]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
