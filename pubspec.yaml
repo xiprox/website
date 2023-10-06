@@ -2,7 +2,7 @@ name: website
 description: Personal website.
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.1+1
 
 environment:
   sdk: ">=2.17.0-69.2.beta <3.0.0"
